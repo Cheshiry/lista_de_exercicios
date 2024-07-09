@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Atividade</h1>
+
+    <section></section>
+
+</body>
+<script>
+    const atividade = {
+        nome: "Almoço",
+        data: new Date("2024-07-08 10:00"),
+        finalizada: false
+
+    }
+
+    //arrow  function
+    const criarItem = (atividade) => {
+
+        let input = '<input type="checkbox"'
+
+        if (atividade.finalizada) {
+            input = input + 'checked'
+        }
+
+        input = input + '>'
+        return `
+  <div>
+    ${input}
+    <span>${atividade.nome}</span>
+    <time>${atividade.data}</time>
+  </div>
+  `
+    }
+
+    const Section = document.querySelector('section')
+    Section.innerHTML = criarItem(atividade)
+</script>
+
+</html>
