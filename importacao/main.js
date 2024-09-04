@@ -1,11 +1,35 @@
 const {gets, print} = require('./funcoes-auxiliares');
+/*
+const numerosSorteados = [];
 
-console.log(funcoes.gets())
+for (let i = 0; i < 5; i++) {
+    const numeroSorteado = gets();
+    numerosSorteados.push(numeroSorteado);
+    
+}
 
-const pessoa = {
-    nome: 'vitor'
-};
+let maiorValor = 0;
 
-const nome = pessoa;
+for (let i = 0; i < numerosSorteados.length; i++) {
+    const numeroSorteado = numerosSorteados[i];
+    if (numeroSorteado > maiorValor) {
+        maiorValor = numeroSorteado;
+    }
+}
 
-const {nome} = pessoa.nome;
+print(maiorValor);
+print(numerosSorteados);
+*/
+
+let maiorValorEncontrado = 0;
+const quantidadeDeAlunos = gets();
+
+for (let i = 0; i < quantidadeDeAlunos; i++) {
+    const numeroSorteado = gets();
+    if (numeroSorteado > maiorValorEncontrado) {
+        maiorValorEncontrado = numeroSorteado;
+    }
+    
+}
+
+print(maiorValorEncontrado)
