@@ -6,6 +6,6 @@ const tabela = [];
 
 for (let i = 0; i <= 10; i++) {
 
-    print(`${mult}X${i} = ${mult * i}`) ;
+    print(`${mult} X ${i} = ${mult * i}`) ;
     
 }
