@@ -4,8 +4,8 @@ const media = gets();
 
 if (media < 5) {
     print("Reprovado " + media);
-} else if (media >= 5 && media <7) {
+} else if (media >= 5 && media < 7) {
     print("Recuperação " + media);
 } else {
-    print("Aprovado "+ media);
+    print("Aprovado " + media);
 }
