@@ -6,6 +6,8 @@ if (media < 5) {
     print("Reprovado " + media);
 } else if (media >= 5 && media < 7) {
     print("Recuperação " + media);
-} else {
+} else if (media >= 7){
     print("Aprovado " + media);
+}else {
+    print("Número invalido")
 }
