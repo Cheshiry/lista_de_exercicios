@@ -1,16 +1,25 @@
-const {print, gets} = require("./funcaoSalario")
+const { gets, print } = require('./funcaoSalario');
 
 let salarioBruto = gets();
 let beneficio = gets();
 let salarioLiquido;
 
-    if (salarioBruto <= 0 || salarioBruto < 1100){
-        salarioLiquido = (salarioBruto - (salarioBruto * 0.05)) + beneficio;
+function verificarSalario(salarioBruto) {
+    
+if (salarioBruto > 0 || salarioBruto <= 1100){
+    return (salarioBruto - (salarioBruto * 0.05));
+        
     }
-    if (salarioBruto <= 1101 || salarioBruto < 2500){
-        salarioLiquido = (salarioBruto - (salarioBruto * 0.1)) + beneficio;
-    }
-    else{
-        salarioLiquido = (salarioBruto - (salarioBruto * 0.15)) + beneficio;
-    }
+else if (salarioBruto >= 1101 || salarioBruto <= 2500){
+    return (salarioBruto - (salarioBruto * 0.1));
+       
+        }
+else if(salario < 2501){
+    return (salarioBruto - (salarioBruto * 0.15));
+        
+}
+}
 
+novo = verificarSalario(salarioBruto)
+
+print(novo + beneficio);
