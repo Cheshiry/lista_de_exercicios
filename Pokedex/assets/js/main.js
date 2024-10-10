@@ -30,7 +30,7 @@ const pokemonList = document.getElementById('pokemonList')
 fetch(url)
 .then((response) => response.json())
 .then((jsonBody) => jsonBody.results)
-.then ((pokemons) => {
+.then ((pokemonList) => {
     for (let i = 0; i < pokemonList.length; i++) {
         const pokemon = pokemons[i];
         console.log
