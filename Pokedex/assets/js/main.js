@@ -10,7 +10,7 @@ const limit = 10
 const url = `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`
 
 function convertPokemonToHtml(pokemon){
-    return `  <ol class="pokemons">
+    return `<ol class="pokemons">
                 <li class="pokemon">
                     <span class="number">#001</span>
                     <span class="name">${pokemon.name}</span>
