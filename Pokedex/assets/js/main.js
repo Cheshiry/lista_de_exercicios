@@ -1,14 +1,3 @@
-// const btnTeste = document.getElementById("btn")
-// console.log("Testei!!");
-
-// btnTeste.addEventListener("click",function(){
-//     console.log("Clicou no botâo!");
-// })
-
-const offset = 0
-const limit = 10
-const url = `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`
-
 function convertPokemonToLi(pokemon) {
     return `
     <li class="pokemon">
