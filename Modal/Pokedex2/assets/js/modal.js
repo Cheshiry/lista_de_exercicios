@@ -1,4 +1,13 @@
- // Modal e botão de fechar
+const pokemonList = document.getElementById('pokemonList');
+    data.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = item.name;
+        li.dataset.description = item.description; // Armazenando detalhes na data
+        li.dataset.id = item.id;
+        itemList.appendChild(li);
+    });
+
+// Modal e botão de fechar
  const modal = document.getElementById('modal');
  const closeBtn = document.getElementById('close-btn');
  const modalDetails = document.getElementById('modal-details');
@@ -21,6 +30,5 @@
  window.addEventListener('click', (event) => {
      if (event.target === modal) {
          modal.style.display = 'none';
-     }
+     
  });
-});
