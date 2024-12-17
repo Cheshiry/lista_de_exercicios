@@ -1,4 +1,4 @@
-const pokemonList = document.getElementById('pokemonList');
+const pokemonList = document.getElementById('modal');
     data.forEach(item => {
         const li = document.createElement('li');
         li.textContent = item.name;
