@@ -1,6 +1,6 @@
 /* styles.css */
 
-/* Estilo básico da lista */
+/* Estilo básico da lista 
 ul {
     list-style-type: none;
 }
@@ -14,7 +14,7 @@ li {
 }
 
 /* Estilo da janela modal */
-.modal {
+.janela-modal {
     display: none; /* Inicialmente escondida */
     position: fixed;
     z-index: 1;
@@ -27,7 +27,7 @@ li {
     padding-top: 60px;
 }
 
-.modal-content {
+.modal {
     background-color: white;
     margin: 5% auto;
     padding: 20px;
@@ -36,7 +36,7 @@ li {
     max-width: 500px;
 }
 
-.close-btn {
+.fechar {
     color: #aaa;
     font-size: 28px;
     font-weight: bold;
@@ -46,8 +46,8 @@ li {
     cursor: pointer;
 }
 
-.close-btn:hover,
-.close-btn:focus {
+.fechar:hover,
+.fechar:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;

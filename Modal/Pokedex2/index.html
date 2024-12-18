@@ -1,61 +1,62 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokedex</title>
-    
+
     <!-- novo css -->
     <link rel="stylesheet" href="./assets/css/global.css">
     <link rel="stylesheet" href="./assets/css/pokedex.css">
     <link rel="stylesheet" href="./assets/css/modal-style.css">
-    
+
     <!-- fonte -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
 
     <!-- normalize -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 
 </head>
+
 <body>
     <section class="content">
         <h1>Pokedex:</h1>
-            <ol id="pokemonList" class="pokemons">
-                
-                <!-- Pokemons here -->
-            </ol>
+        <ol onclick="abrirModal();" id="pokemonList" class="pokemons">
 
-            <div class="pagination">
-                <button type="button" id="loadMoreBtn">Load More...</button>
-            </div>
-        </section>
-<section>
-    
-            <div id="modal" class="modal">
-                <div class="modal-content">
-                    <span id="close-btn" class="close-btn">&times;</span>
-                    <h2>Detalhes do Item</h2>
-                    <p id="modal-details">
-                        <ol>
-                            <li>
+            <!-- Pokemons here -->
+        </ol>
 
-                        </li>
-                    </ol>
-                    </p>
-                </div>
+        <div class="pagination">
+            <button type="button" id="loadMoreBtn">Load More...</button>
+        </div>
+
+
+        <div class="janela-modal" id="janela-modal">
+            <div class="modal">
+                <button class="fechar" id="fechar">X</button>
+                <h1>janela modal</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam deleniti consequuntur officia
+                    debitis quam, corrupti facere repellendus odio animi dolorum minus eum porro quibusdam eos ea nam
+                    velit reiciendis perferendis!</p>
             </div>
-        
-            
-        </section>
-        
+        </div>
+
+    </section>
+
     <script src="./assets/js/modal.js"></script>
     <script src="./assets/js/poke-api.js"></script>
     <script src="./assets/js/pokemon-model.js"></script>
     <script src="./assets/js/main.js"></script>
-    
+
 
 </body>
+
 </html>

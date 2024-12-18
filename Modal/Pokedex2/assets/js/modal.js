@@ -1,4 +1,4 @@
-const pokemonList = document.getElementById('modal');
+/* const pokemonList = document.getElementById('modal');
     data.forEach(item => {
         const li = document.createElement('li');
         li.textContent = item.name;
@@ -31,4 +31,6 @@ const pokemonList = document.getElementById('modal');
      if (event.target === modal) {
          modal.style.display = 'none';
      
- }});
+ }}); */
+
+ function
