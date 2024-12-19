@@ -29,7 +29,7 @@
 <body>
     <section class="content">
         <h1>Pokedex:</h1>
-        <ol onclick="abrirModal();" id="pokemonList" class="pokemons">
+        <ol id="pokemonList" class="pokemons">
 
             <!-- Pokemons here -->
         </ol>
@@ -38,18 +38,20 @@
             <button type="button" id="loadMoreBtn">Load More...</button>
         </div>
 
+    </section>
+
 
         <div class="janela-modal" id="janela-modal">
             <div class="modal">
                 <button class="fechar" id="fechar">X</button>
-                <h1>janela modal</h1>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam deleniti consequuntur officia
-                    debitis quam, corrupti facere repellendus odio animi dolorum minus eum porro quibusdam eos ea nam
-                    velit reiciendis perferendis!</p>
+                <h1></h1>
+                <ol>
+                    <li></li>
+                </ol>
+                </div>
             </div>
-        </div>
-
-    </section>
+        
+        
 
     <script src="./assets/js/modal.js"></script>
     <script src="./assets/js/poke-api.js"></script>

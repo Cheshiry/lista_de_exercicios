@@ -136,7 +136,7 @@
     width: 100%;
     padding: 1rem;
 }
-.pagination button{
+.pagination #loadMoreBtn{
     padding: 1rem 1.5rem;
     margin: .25rem 0;
     color: #fff;
@@ -144,7 +144,7 @@
     border: none;
     border-radius: 1rem;
 }
-.pagination button:hover{
+.pagination #loadMoreBtn:hover{
     padding: 1rem 1.5rem;
     margin: .25rem 0;
     color: #fff;

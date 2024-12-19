@@ -1,16 +1,29 @@
-/* const pokemonList = document.getElementById('modal');
-    data.forEach(item => {
-        const li = document.createElement('li');
-        li.textContent = item.name;
-        li.dataset.description = item.description; // Armazenando detalhes na data
-        li.dataset.id = item.id;
-        itemList.appendChild(li);
-    });
+function convertPokeInfo(pokeDetail) {
+    const pokemon = new Pokemon()
+    pokemon.number = pokeDetail.id
+    pokemon.name = pokeDetail.name
+    pokemon.types = pokeDetail.types.map((typeSlot) => typeSlot.type.name)
+
+    const types = pokeDetail.types.map((typeSlot) => typeSlot.type.name)
+    const [type] = types
+
+    pokemon.types = types
+    pokemon.type = type
+
+    pokemon.photo = pokeDetail.sprites.other.dream_world.front_default
+
+    return pokemon
+}
+
+ 
 
 // Modal e botão de fechar
- const modal = document.getElementById('modal');
- const closeBtn = document.getElementById('close-btn');
- const modalDetails = document.getElementById('modal-details');
+ const modal = document.getElementById('janela-modal');
+ const closeBtn = document.getElementById('fechar');
+ const modalDetails = document.getElementById('modal');
+ const itemList = document.getElementById('pokemonList')
+
+
 
  // Quando um item é clicado
  itemList.addEventListener('click', (event) => {
@@ -31,6 +44,5 @@
      if (event.target === modal) {
          modal.style.display = 'none';
      
- }}); */
+ }}); 
 
- function

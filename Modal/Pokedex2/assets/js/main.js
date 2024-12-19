@@ -12,7 +12,7 @@ function loadPokemonItens(offset, limit) {
     pokeApi.getPokemons(offset, limit).then((pokemons = []) => {
         const newHtml = pokemons.map((pokemon) => {
                 return `
-                    <li class="pokemon ${pokemon.type}">
+                    <li onclick="convertPokeInfo();" class="pokemon ${pokemon.type}">
                         <span class="number">#${pokemon.number}</span>
                         <span class="name">${pokemon.name}</span>
             
@@ -29,22 +29,21 @@ function loadPokemonItens(offset, limit) {
             }
         ).join('')
         pokemonList.innerHTML += newHtml
-    })
+    });
 }
+ok
+    loadPokemonItens(offset, limit)
 
-loadPokemonItens(offset, limit)
-
-loadMoreButton.addEventListener('click', () => {
-    offset += limit
-    const qtdRecordsWithNexPage = offset + limit
-
-    if (qtdRecordsWithNexPage >= maxRecords) {
-        const newLimit = maxRecords - offset
-        loadPokemonItens(offset, newLimit)
-
-        loadMoreButton.parentElement.removeChild(loadMoreButton)
-    } else {
-        loadPokemonItens(offset, limit)
-    }
-})
-
+    loadMoreButton.addEventListener('click', () => {
+        offset += limit
+        const qtdRecordsWithNexPage = offset + limit
+    
+        if (qtdRecordsWithNexPage >= maxRecords) {
+            const newLimit = maxRecords - offset
+            loadPokemonItens(offset, newLimit)
+    
+            loadMoreButton.parentElement.removeChild(loadMoreButton)
+        } else {
+            loadPokemonItens(offset, limit)
+        }
+    })
