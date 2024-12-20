@@ -70,7 +70,7 @@ function loadPokemonItens(offset, limit) {
     
         // Cria o conteúdo do modal
         const conteudo = `
-            <h2>#${number} - ${name}</h2>
+            <h2>#${pokem.name} - ${name}</h2>
             <div class="types">
                 <strong>Types:</strong>
                 <span>${types}</span>
