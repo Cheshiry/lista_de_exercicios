@@ -1,4 +1,4 @@
-function convertPokeInfo(pokeDetail) {
+/* function convertPokeInfo(pokeDetail) {
     const pokemon = new Pokemon()
     pokemon.number = pokeDetail.id
     pokemon.name = pokeDetail.name
@@ -46,3 +46,4 @@ function convertPokeInfo(pokeDetail) {
      
  }}); 
 
+ */

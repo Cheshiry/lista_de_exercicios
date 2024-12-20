@@ -12,7 +12,7 @@ function loadPokemonItens(offset, limit) {
     pokeApi.getPokemons(offset, limit).then((pokemons = []) => {
         const newHtml = pokemons.map((pokemon) => {
                 return `
-                    <li onclick="convertPokeInfo();" class="pokemon ${pokemon.type}">
+                    <li onclick="abrirModal();" class="pokemon ${pokemon.type}">
                         <span class="number">#${pokemon.number}</span>
                         <span class="name">${pokemon.name}</span>
             
@@ -29,9 +29,17 @@ function loadPokemonItens(offset, limit) {
             }
         ).join('')
         pokemonList.innerHTML += newHtml
+
+        const pokeI = document.querySelectorAll('.pokemon');
+        pokeI.forEach(item => {
+            item.addEventListener('click', (e)=>{
+                abrirModal(e.target.closest('.pokemon'));
+            })
+        })
+
     });
 }
-ok
+
     loadPokemonItens(offset, limit)
 
     loadMoreButton.addEventListener('click', () => {
@@ -47,3 +55,33 @@ ok
             loadPokemonItens(offset, limit)
         }
     })
+
+    function abrirModal(elemento) {
+        const modal = document.getElementById('janela-modal');
+        const conteudoModal = document.getElementById('conteudo-modal');
+        
+        // Coleta as informações do Pokémon a partir dos atributos data
+        const pokem = new Pokemon;
+
+        const number = elemento.getAttribute(pokem.number);
+        const name = elemento.getAttribute(pokem.name);
+        const types = elemento.getAttribute(pokem.type);
+        const photo = elemento.getAttribute(pokem.photo);
+    
+        // Cria o conteúdo do modal
+        const conteudo = `
+            <h2>#${number} - ${name}</h2>
+            <div class="types">
+                <strong>Types:</strong>
+                <span>${types}</span>
+            </div>
+            <img src="${photo}" alt="${name}" />
+        `;
+    
+        // Coloca o conteúdo no modal
+        conteudoModal.innerHTML = conteudo;
+    
+        // Abre o modal
+        modal.classList.add('abrir');
+    }
+    
