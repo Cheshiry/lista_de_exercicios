@@ -31,10 +31,7 @@
 
 body {
     background-color: var(--cor-de-fundo);
-    width: 100%;
-
-    box-sizing: border-box;
-
+    
 }
 
 #content {
@@ -43,51 +40,13 @@ body {
     margin-bottom: 40px;
 }
 
-.paragrafo {
-    display: flex;
-
-}
-
 footer {
     background-color: var(--rodape);
     display: flex;
     left: 0;
-    height: 40px;
+    height: 50px;
     position: fixed;
     width: 100%;
     justify-content: center;
     align-items: center;
-}
-
-@media screen and (max-width: 992px) {
-    .content {
-        max-width: 992px;
-        height: 100vh;
-
-    }
-
-    .cabecalho__menu__link {
-        margin: auto;
-
-    }
-
-    .cabecalho {
-        padding: 5%;
-        padding-bottom: 0%;
-    }
-
-    .cabecalho__menu {
-        justify-content: center;
-    }
-
-    footer {
-        background-color: var(--rodape);
-        display: flex;
-
-        position: absolute;
-        width: 100%;
-        text-align: center;
-
-    }
-
 }
