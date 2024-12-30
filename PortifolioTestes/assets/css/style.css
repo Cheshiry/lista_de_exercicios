@@ -4,6 +4,7 @@
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 1.15rem;
+    box-sizing: border-box;
 }
 
 :root {
@@ -28,12 +29,13 @@
 body {
     background-color: var(--cor-de-fundo);
     margin-bottom: -200px;
+
 }
 
 #content {
     padding: 0rem 5%;
     text-align: justify;
-height: 90%;
+height: 90vh;
 margin-bottom: 5rem;
 }
 
