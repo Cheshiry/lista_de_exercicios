@@ -14,6 +14,7 @@
 
 .cabecalho {
     padding: 2% 0% 0% 5%;
+    height: 4rem;
 }
 
 .cabecalho__menu {
@@ -26,6 +27,13 @@
     text-decoration: none;
 }
 
+.cabecalho__menu__link:hover{
+    text-decoration:underline;
+    border-radius: 10px;
+    padding: 5px;
+    color: rgb(0, 4, 8);
+}
+
 body {
     background-color: var(--cor-de-fundo);
     margin-bottom: -200px;
@@ -35,15 +43,15 @@ body {
 #content {
     padding: 0rem 5%;
     text-align: justify;
-height: 80vh;
+height: 90vh;
 margin-bottom: 5rem;
 }
 
 .rodape-conteudo {
     background-color: var(--rodape);
     width: 100%;
-    height: 10%;
+    height: 5rem;
     text-align: center;
- 
+    padding: 1rem;
 
 }
