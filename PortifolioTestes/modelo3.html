@@ -40,6 +40,7 @@
             font-weight: bold;
             padding: 0px 5px 0px 5px;
             cursor: pointer;
+            display: none;
         }
         nav{
             flex: 1 1 100vh;
@@ -81,7 +82,11 @@
                 height: 100px;
             }
         }
-        
+        @media only screen and (max-width 717px) {
+          #openMenu, #closeMenu {
+              display: none;
+          }
+            }
     </style>
 </head>
 <body>
