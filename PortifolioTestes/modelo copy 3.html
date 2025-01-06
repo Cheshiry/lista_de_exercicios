@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            margin: 3px;
+            flex: 1 1 100vw;
+            flex-wrap: wrap;
+        }
+        header, nav, main, aside, footer {
+            display: flex;
+            margin: 3px;
+            background-color: darkgrey;
+            flex-wrap: wrap;
+
+        }
+
+        header {
+            flex: 1 1 100vw;
+               
+        }
+        header #logo {
+            flex: 0 1 200px;
+            background-color: dimgrey;
+        }
+        #openMenu, #closeMenu{
+            border: none;
+            background: none;
+            font-size: 30px;
+            font-weight: bold;
+            padding: 0px 5px 0px 5px;
+            cursor: pointer;
+            
+        }
+        nav {
+            flex: 1 1 100vw;
+            align-items: center;
+            justify-content: flex-end;
+        }
+        nav a{
+            margin:3%;
+            font-size: 20pt;
+        }
+        main {
+            flex: 20 1 500px;
+            height: calc(100vh - 224px);
+
+        }
+        aside {
+            flex: 1 1 200px;
+        }
+        footer {
+            flex: 1 1 100vw;
+            height: 100px;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        @media only screen and (max-width: 717px){
+
+            #openMenu{
+                display: block;
+            }
+            #closeMenu{
+                position: fixed;
+                right: 15px;
+                left: 15px;
+            }
+            main{
+                height: calc(100vh - 330px);
+
+            }
+            aside{
+                flex: 1 1 100vw;
+                height: 100px;
+            }
+
+            nav {
+                position: fixed;
+                flex-direction: column;
+                width: 100vw;
+                height: 100vh;
+                background: rgba(255, 255, 255, 0.8);
+                align-items: center;
+                justify-content: center;
+                margin: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="#" id="logo">Logo</a>
+        <button id="openMenu">&#9776</button>
+        <nav>
+            <button id="closeMenu">X</button>
+            <a href="#">Inicio</a>
+            <a href="#">Produtos</a>
+            <a href="#">Sobre</a>
+            <a href="#">Contato</a>
+        </nav>
+    </header>
+    <!--  <nav>Menu</nav>-->
+    <main>Principal</main>
+    <aside>Relacionado</aside>
+    <footer>Rodapé</footer>
+
+
+</body>
+</html>

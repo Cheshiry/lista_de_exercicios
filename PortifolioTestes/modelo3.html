@@ -28,8 +28,28 @@
             flex: 1 1 100vw;
             height: 100px; 
         }
+        header #logo {
+            flex: 0 1 200px;
+            background-color: antiquewhite;
+
+        }
+        #openMenu, #closeMenu {
+            border: none;
+            background: none;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 0px 5px 0px 5px;
+            cursor: pointer;
+        }
         nav{
-            flex: 1 1 200px;
+            flex: 1 1 100vh;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        nav a {
+            margin: 3%;
+            font-size: 16pt;
         }
         
         main {
@@ -44,6 +64,11 @@
             flex: 1 1 100vw;
             height: 100px;
         }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
 
         @media only screen and (max-width: 923px){
 
@@ -56,22 +81,30 @@
                 height: 100px;
             }
         }
-        @media only screen and (max-width: 717px){
-            nav {
-                height: 100px;
-            }
-            main {
-                height: calc(100vh - 435px);
-            }
-        }
+        
     </style>
 </head>
 <body>
-    <header>Cabeçalho</header>
-    <nav>Menu</nav>
+    <header>
+        <a href="#" id="logo">Logo</a>
+
+        <button id="openMenu">&#9776;</button>
+
+        <nav>
+            <button id="closeMenu">X</button>
+            <a href="#">INICIO</a>
+            <a href="#">PRODUTOS</a>
+            <a href="#">SOBRE</a>
+            <a href="#">CONTATO</a>
+        </nav>
+    </header>
+
     <main>Principal</main>
+
     <aside>Relacionado</aside>
+
     <footer>Rodapé</footer>
+
 
 
 </body>
