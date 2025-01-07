@@ -105,6 +105,7 @@
             margin: 0;
             display: none;
             opacity: 0; 
+            transition: 0.3s;
           }
         }
             
@@ -137,10 +138,25 @@
   openMenu.addEventListener ('click', () => {
     menu.style.display = 'flex'
 
+    menu.style.right = (menu.offsetWidth * -1) + 'px'
+    openMenu.style.display = 'none'
+
+    setTimeout(() => {
+        menu.style.opacity = '1'
+  }, 10)
+
   })
 
   closeMenu.addEventListener ('click', () => {
-    menu.removeAttribute('style')
+    menu.style.opacity = '0'
+    menu.style.right = (menu.offsetWidth * -1) + 'px'
+
+    setTimeout(() => {
+        menu.removeAttribute('style')
+        openMenu.removeAttribute('style')
+
+    }, 200)
+
   })
 </script>
 </body>
