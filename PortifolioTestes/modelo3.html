@@ -36,7 +36,7 @@
         #openMenu, #closeMenu {
             border: none;
             background: none;
-            font-size: 20px;
+            font-size: 30px;
             font-weight: bold;
             padding: 0px 5px 0px 5px;
             cursor: pointer;
@@ -98,8 +98,8 @@
             position: fixed; 
             flex-direction: column; 
             width: 100vw;
-            height:100vh;
-            background: rgba(255, 255, 255, 0.8);
+            height: 100vh;
+            background: rgba(255, 255, 255, 0.9);
             align-items: center;
             justify-content: center;
             margin: 0;
@@ -134,28 +134,31 @@
 
 <script>
     
-
-  openMenu.addEventListener ('click', () => {
+  openMenu.addEventListener('click', () => {
     menu.style.display = 'flex'
 
     menu.style.right = (menu.offsetWidth * -1) + 'px'
+
     openMenu.style.display = 'none'
 
     setTimeout(() => {
         menu.style.opacity = '1'
+
+        menu.style.right = '0'
   }, 10)
 
   })
 
   closeMenu.addEventListener ('click', () => {
     menu.style.opacity = '0'
+
     menu.style.right = (menu.offsetWidth * -1) + 'px'
 
     setTimeout(() => {
         menu.removeAttribute('style')
         openMenu.removeAttribute('style')
 
-    }, 200)
+    }, 20)
 
   })
 </script>
