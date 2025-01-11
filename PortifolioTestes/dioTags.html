@@ -11,27 +11,6 @@
             box-sizing: border-box;
         }
 
-        * {
-            scrollbar-width: 10px;
-            scrollbar-color: #5a5a5a, #9a9a9a;
-        }
-
-        ::-webkit-scrollbar{
-            width: 10px;
-        }
-        *::-webkit-scrollbar-track{
-            background: #a9a9a9;
-        }
-
-        *::-webkit-scrollbar-thumb{
-            background-color: #5a5a5a;
-             border-radius: 20px;
-             border: 3px solid #9a9a9a;
-        }
-
-
-
-
         body {    
         display: flex;
             margin: 3px;
@@ -84,7 +63,6 @@
             width: 100%;
             height: 2000px;
             margin: 10px;
-            background: linear-gradient(#000000, #656565, #c2c1c1)
         }
 
         aside {
@@ -149,7 +127,7 @@
 </head>
 <body>
     <header>
-        <a href="#" id="logo">Logo</a>
+        <a href="#" id="logo">1º Projeto Dio HTML</a>
 
         <button id="openMenu">&#9776;</button>
 
@@ -162,46 +140,26 @@
         </nav>
     </header>
     
-    <aside>Relacionado</aside>
+    <aside>Relacionado
+        <h2>indice</h2>
+        <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+    </aside>
     <main>
-        <h1>Principal</h1>
+        <h1>Tag's aprendidas</h1>
         <section>
-
+            <h3>A tag html</h3>
+            <h3>A tag head</h3>
+            <h3>A tag body</h3>
+            <h3>A tag link</h3>
+            <h3>A tag a</h3>
         </section>
     </main>
 
 
     <footer>Rodapé</footer>
 
-<script>
-    
-  openMenu.addEventListener('click', () => {
-    menu.style.display = 'flex'
-
-    menu.style.right = (menu.offsetWidth * -1) + 'px'
-
-    openMenu.style.display = 'none'
-
-    setTimeout(() => {
-        menu.style.opacity = '1'
-
-        menu.style.right = '0'
-  }, 10)
-
-  })
-
-  closeMenu.addEventListener ('click', () => {
-    menu.style.opacity = '0'
-
-    menu.style.right = (menu.offsetWidth * -1) + 'px'
-
-    setTimeout(() => {
-        menu.removeAttribute('style')
-        openMenu.removeAttribute('style')
-
-    }, 20)
-
-  })
-</script>
 </body>
         </html>
