@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,13 +12,18 @@
             box-sizing: border-box;
         }
 
-        body {    
-        display: flex;
+        body {
+            display: flex;
             margin: 3px;
             flex: 1 1 100vw;
             flex-wrap: wrap;
         }
-        header, nav, main, aside, footer {
+
+        header,
+        nav,
+        main,
+        aside,
+        footer {
             display: flex;
             margin: 3px;
             background-color: darkgrey;
@@ -26,14 +32,17 @@
 
         header {
             flex: 1 1 100vw;
-            
+
         }
+
         header #logo {
             flex: 0 1 200px;
             background-color: rgb(212, 208, 203);
 
         }
-        #openMenu, #closeMenu {
+
+        #openMenu,
+        #closeMenu {
             border: none;
             background: none;
             font-size: 30px;
@@ -42,7 +51,8 @@
             cursor: pointer;
             display: none;
         }
-        nav{
+
+        nav {
             flex: 1 1 100vh;
             align-items: center;
             justify-content: flex-end;
@@ -52,7 +62,7 @@
             margin: 3%;
             font-size: 16pt;
         }
-        
+
         main {
             flex: 20 1 500px;
             flex-wrap: wrap;
@@ -68,27 +78,29 @@
         aside {
             flex: 1 1 200px;
         }
+
         footer {
             flex: 1 1 100vw;
         }
+
         a {
             text-decoration: none;
             color: inherit;
         }
 
 
-        @media only screen and (max-width: 923px){
+        @media only screen and (max-width: 923px) {
 
             header {
                 order: 0;
             }
 
-            main{
-                
+            main {
+
                 order: 1;
             }
-           
-            aside{
+
+            aside {
                 flex: 1 1 100vw;
                 order: 2;
             }
@@ -97,34 +109,40 @@
                 order: 3;
             }
         }
+
         @media only screen and (max-width: 717px) {
-          #openMenu, #closeMenu {
-              display: block;
-          }
-          #openMenu {
-            margin-left: auto;
-          }
-          #closeMenu {
-            position: fixed;
-            right: 15px;
-            top: 15px;
-          }
-          nav {
-            position: fixed; 
-            flex-direction: column; 
-            width: 100vw;
-            background: rgba(255, 255, 255, 0.9);
-            align-items: center;
-            justify-content: center;
-            margin: 0;
-            display: none;
-            opacity: 0; 
-            transition: 0.3s;
-          }
+
+            #openMenu,
+            #closeMenu {
+                display: block;
+            }
+
+            #openMenu {
+                margin-left: auto;
+            }
+
+            #closeMenu {
+                position: fixed;
+                right: 15px;
+                top: 15px;
+            }
+
+            nav {
+                position: fixed;
+                flex-direction: column;
+                width: 100vw;
+                background: rgba(255, 255, 255, 0.9);
+                align-items: center;
+                justify-content: center;
+                margin: 0;
+                display: none;
+                opacity: 0;
+                transition: 0.3s;
+            }
         }
-            
     </style>
 </head>
+
 <body>
     <header>
         <a href="#" id="logo">1º Projeto Dio HTML</a>
@@ -139,22 +157,50 @@
             <a href="#">CONTATO</a>
         </nav>
     </header>
-    
+
     <aside>Relacionado
         <h2>indice</h2>
         <a href="#"></a>
-            <a href="#"></a>
-            <a href="#"></a>
-            <a href="#"></a>
+        <a href="#"></a>
+        <a href="#"></a>
+        <a href="#"></a>
     </aside>
     <main>
         <h1>Tag's aprendidas</h1>
+        
         <section>
-            <h3>A tag html</h3>
+            <hr>
+            <h3>Deve começar</h3>
+            <p>
+                Todo documento html deve começar com <code>!DOCTYPE</code>,seguida pela tag <code>html</code>, que abre
+                e fecha o arquivo html.
+            </p>
+            <hr />
+
             <h3>A tag head</h3>
+            <p>
+                Na tag <code>head</code>, deve conter todos os dados que não aparecem na parte visual
+            </p>
+            <hr />
+
             <h3>A tag body</h3>
+            <p>
+                A <code>body</code>, define o corpo do texto, onde fica as partes que são visiveis.
+            </p>
+            <hr />
+
+            <h3>A tag p</h3>
+            <p>
+                Define o paragrafo.
+            </p>
+            <hr />
+
             <h3>A tag link</h3>
+            <hr />
+
             <h3>A tag a</h3>
+            <hr />
+
         </section>
     </main>
 
@@ -162,4 +208,5 @@
     <footer>Rodapé</footer>
 
 </body>
-        </html>
+
+</html>
