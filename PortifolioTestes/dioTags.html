@@ -12,6 +12,11 @@
             box-sizing: border-box;
         }
 
+        hr {
+            margin: 80px;
+
+        }
+
         body {
             display: flex;
             margin: 3px;
@@ -67,16 +72,32 @@
             flex: 20 1 500px;
             flex-wrap: wrap;
             overflow: auto;
+            padding: 30px;
         }
 
         main section {
+
             width: 100%;
-            
             margin: 10px;
         }
 
         aside {
             flex: 1 1 200px;
+            flex-direction: column;
+            gap: 25px;
+            align-items: center;
+
+        }
+
+        aside a:hover {
+            background-color: cornflowerblue;
+            width: 100%;
+            height: 35px;
+            border-bottom: 3px solid black;
+            font-weight: 400;
+            transition: 0.02s;
+            text-align: center;
+            
         }
 
         footer {
@@ -160,14 +181,16 @@
 
     <aside>Relacionado
         <h2>indice</h2>
-        <a href="#"></a>
-        <a href="#"></a>
-        <a href="#"></a>
-        <a href="#"></a>
+        <a href="#">Deve começar</a>
+        <a href="#">A tag head</a>
+        <a href="#">A tag body</a>
+        <a href="#">A tag p</a>
+        <a href="#">A tag link</a>
+        <a href="#">A tag a</a>
     </aside>
     <main>
         <h1>Tag's aprendidas</h1>
-        
+
         <section>
             <hr>
             <h3>Deve começar</h3>
@@ -179,40 +202,41 @@
 
             <h3>A tag head</h3>
             <p>
-                Na tag <code>head</code>, deve conter todos os dados que não aparecem na parte visual, providencia informações gerais (metadados) sobre o documento, incluindo seu título e links para scripts e folhas de estilos.
+                Na tag <code>head</code>, deve conter todos os dados que não aparecem na parte visual, providencia
+                informações gerais (metadados) sobre o documento, incluindo seu título e links para scripts e folhas de
+                estilos.
             </p>
             <hr />
-
             <h3>A tag body</h3>
             <p>
                 A <code>body</code>, define o corpo do texto, onde fica as partes que são visiveis.
             </p>
             <hr />
-
             <h3>A tag p</h3>
             <p>
                 Define o paragrafo.
             </p>
             <hr />
-
             <h3>A tag link</h3>
-            <p> A tag <code>link</code>, serve de caminho entre o documento atual e fontes externas. 
-            Podendo ter as propriedades como:
-                _blank: abre a página em uma nova janela/aba;
-                _self: abre a página na mesma janela;
-                _parent: abre a página na mesma janela do link;
-                _top: cancela todos os demais frames e abre a nova página no mesmo navegador.
+            <p> A tag <code>link</code>, serve de caminho entre o documento atual e fontes externas.
+                Podendo ter as propriedades como:
+            <ul>
+                <li>_blank: abre a página em uma nova janela/aba;</li>
+                <li>_self: abre a página na mesma janela;</li>
+                <li>_parent: abre a página na mesma janela do link;</li>
+                <li>_top: cancela todos os demais frames e abre a nova página no mesmo navegador.</li>
+            </ul>
             </p>
             <hr />
-
             <h3>A tag a</h3>
-            <p>A tag <code>a</code>, ou ancoragem define um hiperlink, normalmenteutilizadapara ligar uma páginaa outra, seu atributomais importante é o <code>href</code>, que indica o destino do link.
-            Por padrão, os links aparecerão da seguinte forma em todos os navegadores:
-
-Um link não visitado é sublinhado e azul
-Um link visitado é sublinhado e roxo
-Um link ativo é sublinhado e vermelho
-Dicas e notas
+            <p>A tag <code>a</code>, ou ancoragem define um hiperlink, normalmenteutilizadapara ligar uma páginaa outra,
+                seu atributomais importante é o <code>href</code>, que indica o destino do link.
+                Por padrão, os links aparecerão da seguinte forma em todos os navegadores:
+            <ul>
+                <li>Um link não visitado é sublinhado e azul</li>
+                <li>Um link visitado é sublinhado e roxo</li>
+                <li>Um link ativo é sublinhado e vermelho</li>
+            </ul>
             </p>
             <hr />
 
@@ -224,4 +248,4 @@ Dicas e notas
 
 </body>
 
-    </html>
+</html>
