@@ -5,3 +5,5 @@ function gets(params) {
 function print(texto) {
     console.log(texto)
 }
+
+module.exports = { gets, print };
