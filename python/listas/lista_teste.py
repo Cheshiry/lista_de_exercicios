@@ -17,4 +17,4 @@ pares_02 = [numero for numero in numeros_02 if numero % 2 == 0]
 print(pares_02)
 
 carros =  ("gol") 
-print(isinstance(carros, tuple))
+nt(isinstance(carros, tuple))
