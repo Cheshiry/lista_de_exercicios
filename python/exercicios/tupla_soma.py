@@ -1,6 +1,7 @@
 # No "TODO", abaixo: Crie a função 'soma_tupla' para receber uma tupla de números inteiros como argumento:
 
 def soma_tupla(tupla):
+    for (nun in tupla):
     return sum(elementos)
 
 if __name__ == "__main__":
