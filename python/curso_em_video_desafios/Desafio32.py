@@ -1,7 +1,14 @@
-ano = int(input("Digite em que ano está: "))
+from datetime import date
 
-if ano%4 == 0:
-    print(f"Esse ano é ano bisesto {ano}")
+
+ano = int(input("Digite um ano se 0 verificará o ano atual:  "))
+
+if ano == 0:
+    ano = date.today().year
+    print("{}".format(ano))
+
+if ano % 4 == 0 and ano % 100 != 0 or ano % 400 == 0:
+    print("o ano {} e bissexto".format(ano))
 
 else:
-    print(f"É um ano normal {ano}")
+    print("o ano {} não é bissexto".format(ano))
