@@ -1,6 +1,6 @@
 print("-=" * 20)
 print("\033[1;36;46mAnalisador de triângulo\033[m")
-print("-=" * 20)
+print("\033[-=" * 20)
 
 r1 = int(input("Digite um segmento d3 reta: "))
 r2 = int(input("Digite outro segmento de reta: "))
