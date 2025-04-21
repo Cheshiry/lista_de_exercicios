@@ -17,10 +17,12 @@ elif idade > 18:
        
 else:
     print(f" você tem {idade} e já precisa se alistar.")
-resp = str(input("Você já se alistou? s/n\n"))
-print("+=" * 20)
-if resp == "s":
-    print("Você não precisase preocuparentão")
-else:
-    print("Procure saber sobre seu alistamento urgente é obrigatório!")    
 
+    resp = str(input("Você já se alistou? s/n\n"))
+
+    print("+=" * 20)
+
+    if resp == "s":
+        print("Você não precisase preocupar então")
+    else:
+        print("Procure saber sobre seu alistamento urgente é obrigatório!")    

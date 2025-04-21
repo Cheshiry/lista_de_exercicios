@@ -9,13 +9,12 @@ Escolha qual o formato de conversão do número:
 	"""))
 
 if escolha == 1:
-	
-    	novo_num = bin(num)
-    	print(novo_num)
+    novo_num = bin(num)
+    print(novo_num)
 	
 elif escolha == 2:
-    	novo_num = hex(num)
-    	print(novo_num)
+    novo_num = hex(num)
+    print(novo_num)
 else:
     novo_num = oct(num)
     print(novo_num)
