@@ -1,2 +1,0 @@
-
-""" Jokempo com o pc: """

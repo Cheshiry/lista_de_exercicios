@@ -7,13 +7,15 @@ print("\033[1;36;46mAnalisador de financiamento \033[m")
 print("-=" * 20)
 
 anos = int(input("Digite em quanto anos quer pagar a casa: "))
-salario = float(input("Digite seu salário: "))
-valor_casa = float(input("Digite o valor da casa: "))
+salario = float(input("Digite seu salário: R$"))
+valor_casa = float(input("Digite o valor da casa: R$"))
 
 valor_mensal = valor_casa / (anos * 12)
-salario_30p = (salario * 30) / 100
+minimo = (salario * 30) / 100
 
-if valor_mensal <= salario_30p:
-    print(f"Consórcio aprovado valor mensal a ser pago R${valor_mensal:.2f} por {anos} anos")
+print(f" Para pagar uma casa de {valor_casa} o valor mensal a ser pago é R${valor_mensal:.2f} por {anos} anos")
+
+if valor_mensal <= minimo:
+    print(f"Consórcio aprovado")
 else:
     print("Consórcio negado ")
