@@ -21,7 +21,7 @@ elif idade <= 19:
     print(f"Quem nasceu em {ano_nasc} é")
     print("Junior", idade,"anos")
     
-elif idade < 20:
+elif idade <= 25:
     print(f"Quem nasceu em {ano_nasc} é")
     print("Sênior", idade,"anos")
     
