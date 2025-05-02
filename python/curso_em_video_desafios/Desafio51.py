@@ -1,6 +1,7 @@
-pa = int(input("Digite um número para começar a PA:" ))
+primeiro = int(input("1º termo: " ))
+razao = int(input("Razão: " ))
+decimo = primeiro + (10 - 1) * razao
 
-passo = int(input("Digite de quanto em quanto se deve ir: "))
-
-for lista in range(pa, 11, passo):
-    print(lista)
+for lista in range(primeiro, decimo + razao, razao):
+    print(lista, end = " → " )
+print("Fim")
