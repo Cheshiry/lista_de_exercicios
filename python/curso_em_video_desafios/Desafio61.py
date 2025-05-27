@@ -10,3 +10,13 @@ while i <= 10:
     i += 1
     
 print("Fim")
+
+print("=+"*20)
+
+primeiro = int(input("1º termo: " ))
+razao = int(input("Razão: " ))
+decimo = primeiro + (10 - 1) * razao
+
+for lista in range(primeiro, decimo, razao):
+    print(lista, end = " → " )
+print("Fim")
