@@ -1,19 +1,18 @@
 primeiro = int(input("1º termo: " ))
 razao = int(input("Razão: " ))
+contador = 1
+mais = 10
+total = 1
 
-i = 1
-stop = 1
-
-while stop !=0 :
-
-    if stop == 1:
-        i = 0
-        while i <= 10:
-            print(primeiro, end = " → " )
-            primeiro += razao 
-            i += 1
-    stop = int(input("\nGostaria de parar? \n[0] Sim\n[1] Não\n"))
-    
+while mais != 0 :
+    total += mais
+    while contador != total:
+        print(primeiro, end = " → " )
+        primeiro += razao 
+        contador += 1
+    print("Pausa")
+    mais = int(input("Quantos a mais? "))
+print(f"A pa foi finalizada com {total-1} de termos.")
 print("Fim")
 
 print("=+"*20)
