@@ -2,19 +2,17 @@ print("Sequência de Fibonacci")
 print("-"*50)
 
 contador = int(input("Digite um número: "))
+i = 3
+t1 = 0
+t2 = 1
+print(f"{t1} > {t2} > ", end="")
 
-contador = 1
-i = 0
-lista = [0,1]
-
-while contador >= i :
-
-    lista.append(lista[0] + lista[1] )
-
-    print(lista, end = " → " )
-    
+while i <= contador:
+    t3 = t1 + t2
+    print(t3, end=" > ")
+    t1 = t2
+    t2 = t3
     i += 1
-
 print("Fim")
 
 print("=+"*20)
