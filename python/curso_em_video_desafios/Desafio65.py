@@ -14,12 +14,12 @@ while resp != "N":
     soma += num
     print("=-"*30)
     resp = str(input("Gostaria de continuar somando[s/n]")).upper().strip()
-
     media = (soma)/(i)
 
 print("=-"*30)
 print(f"A media dos números digitados foi : {media:.2f}")
 print(f"O menor: {menor}")
 print(f"O maior: {maior}")
+print(f"E foram digitados: {i} numeros")
 print("=-"*30)
     
