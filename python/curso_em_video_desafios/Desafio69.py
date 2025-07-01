@@ -1,13 +1,12 @@
 resp = "S"
 sexo = " "
-maior_idade = menor_idade_fem = homem = 0
+maior_idade = menor_idade_fem = homem = idade = 0
 
 
 while True:
-    idade = int(input("Digite sua idade: "))
-    While "MF" not in sexo:
+    while sexo not in "MF":
+        idade = int(input("Digite sua idade: "))
         sexo = str(input("Digite seu sexo[F/M]")).upper().strip().split()[0]
-    
        
     if sexo == "F" and idade < 18:
         menor_idade_fem += 1
@@ -18,9 +17,8 @@ while True:
     if idade >=18:
         maior_idade += 1
         
-    while True:
-        resp = str(input("Quer continuar cadastrando[S/N]")).upper().strip().split()[0]
-    if resp =="S":
+    resp = str(input("Quer continuar cadastrando[S/N]")).upper().strip().split()[0]
+    if resp ==  "N":
         break
     
 print("= FIM =")
