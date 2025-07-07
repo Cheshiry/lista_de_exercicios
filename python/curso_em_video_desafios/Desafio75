@@ -1,0 +1,6 @@
+num = []
+
+for a in range(0,6):
+    numeros_digitados = int(input("Digite um número: "))
+    num.append(numeros_digitados)
+print(num)

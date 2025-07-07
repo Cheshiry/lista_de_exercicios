@@ -1,10 +1,6 @@
 valor_saque = 0
 resp = " "
-'''div5
-div10
-div20
-div50
-div100'''
+
 titulo = "Banco Amigo"
 print(f"{titulo:=^30}")
 saldo = int(input("Digite quanto quer sacar:"))
@@ -34,7 +30,4 @@ while True:
             
         if total_notas == 0:
             break
-    
-    
-    
     
