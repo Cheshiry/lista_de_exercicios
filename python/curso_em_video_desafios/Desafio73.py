@@ -16,6 +16,7 @@ print(sorted(Times_campeonato_semnum))
 
 print("*"*90)
 print(f"O chapecoense está na{Times_campeonato.index('chapecoense')}")
+
 if "chapecoense" in Times_campeonato:
     print("Foi encotrado o time!")
 else:
