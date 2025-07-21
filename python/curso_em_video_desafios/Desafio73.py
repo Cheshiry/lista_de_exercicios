@@ -14,10 +14,16 @@ print("*"*90)
 print("Em ordem alfabetica: ")
 print(sorted(Times_campeonato_semnum))
 
-print("*"*90)
-print(f"O chapecoense está na{Times_campeonato.index('chapecoense')}")
 
+print("*"*90)
+try:
+    time = Times_campeonato.index("chapecoense")
+    print(f"O chapecoense está na{time}")
+except ValueError:
+     print("Infelizmente este time não está presente.")
+'''
 if "chapecoense" in Times_campeonato:
     print("Foi encotrado o time!")
 else:
     print("Infelizmente este time não está presente.")
+''' 

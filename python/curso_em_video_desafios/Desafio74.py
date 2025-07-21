@@ -1,16 +1,19 @@
-import random
+from random import randint
 
-num = []
+num = (randint(1,10),randint(1,10),randint(1,10),randint(1,10),randint(1,10),randint(1,10))
 
+print("Os valores sorteados foram: ", end = " ")
+
+for n in num:
+    print(f"{n}", end=" ")
+
+print('\n')
+print(f"O maior número foi: {max(num)}")
+print(f"O menor número foi: {min(num)}")
+
+'''
 for list in range(0,6):
-    entrada = (random.randint(0,10))
+    entrada = (randint(0,10))
     num.append(entrada)
-
-maior = max(num)
-menor = min(num)
-num_tuple = num
-print(num_tuple)
-
-print(f"O maior número foi: {maior}")
-print(f"O menor número foi: {menor}")
+'''
 
