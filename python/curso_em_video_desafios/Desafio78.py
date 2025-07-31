@@ -20,3 +20,4 @@ for i, v in enumerate(list_num):
         print(f"{i}..", end="")
 print()
 print("-="*30)
+
