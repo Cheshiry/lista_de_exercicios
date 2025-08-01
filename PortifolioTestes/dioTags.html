@@ -61,6 +61,7 @@
             flex: 1 1 100vh;
             align-items: center;
             justify-content: flex-end;
+            
         }
 
         nav a {
@@ -86,10 +87,168 @@
             flex-direction: column;
             gap: 0.53rem;
             align-items: center;
-
+            
         }
+
+        
 
         aside a:hover {
             background-color: cornflowerblue;
             width: 100%;
-            border-bottom: 1px solid black;
+            height: 35px;
+            border-bottom: 3px solid black;
+            font-weight: 400;
+            transition: 0.02s;
+            text-align: center;
+            
+        }
+
+        footer {
+            flex: 1 1 100vw;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+
+        @media only screen and (max-width: 923px) {
+
+            header {
+                order: 0;
+            }
+
+            main {
+
+                order: 1;
+            }
+
+            aside {
+                flex: 1 1 100vw;
+                order: 2;
+            }
+
+            footer {
+                order: 3;
+            }
+        }
+
+        @media only screen and (max-width: 717px) {
+
+            #openMenu,
+            #closeMenu {
+                display: block;
+            }
+
+            #openMenu {
+                margin-left: auto;
+            }
+
+            #closeMenu {
+                position: fixed;
+                right: 15px;
+                top: 15px;
+            }
+
+            nav {
+                position: fixed;
+                flex-direction: column;
+                width: 100vw;
+                background: rgba(255, 255, 255, 0.9);
+                align-items: center;
+                justify-content: center;
+                margin: 0;
+                display: none;
+                opacity: 0;
+                transition: 0.3s;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="#" id="logo">1º Projeto Dio HTML</a>
+
+        <button id="openMenu">&#9776;</button>
+
+        <nav id="menu">
+            <button id="closeMenu">X</button>
+            <a href="#">INICIO</a>
+            <a href="#">PRODUTOS</a>
+            <a href="#">SOBRE</a>
+            <a href="#">CONTATO</a>
+        </nav>
+    </header>
+
+    <aside>Relacionado
+        <h2>indice</h2>
+        <a href="#start">Deve começar</a>
+        <a href="#headTag">A tag head</a>
+        <a href="#bodyTag">A tag body</a>
+        <a href="#pTag">A tag p</a>
+        <a href="#linkTag">A tag link</a>
+        <a href="#aTag">A tag a</a>
+    </aside>
+    <main>
+        
+        <h1>Tag's aprendidas</h1>
+        <section>
+            <hr>
+            <h3 id="start">Deve começar</h3>
+            <p>
+                Todo documento html deve começar com <code>!DOCTYPE</code>,seguida pela tag <code>html</code>, que abre
+                e fecha o arquivo html.
+            </p>
+            <hr />
+
+            <h3 id="headTag">A tag head</h3>
+            <p>
+                Na tag <code>head</code>, deve conter todos os dados que não aparecem na parte visual, providencia
+                informações gerais (metadados) sobre o documento, incluindo seu título e links para scripts e folhas de
+                estilos.
+            </p>
+            <hr />
+            <h3 id="bodyTag">A tag body</h3>
+            <p>
+                A <code>body</code>, define o corpo do texto, onde fica as partes que são visiveis.
+            </p>
+            <hr />
+            <h3 id="pTag">A tag p</h3>
+            <p>
+                Define o paragrafo.
+            </p>
+            <hr />
+            <h3 id="linkTag">A tag link</h3>
+            <p> A tag <code>link</code>, serve de caminho entre o documento atual e fontes externas.
+                Podendo ter as propriedades como:
+            <ul>
+                <li>_blank: abre a página em uma nova janela/aba;</li>
+                <li>_self: abre a página na mesma janela;</li>
+                <li>_parent: abre a página na mesma janela do link;</li>
+                <li>_top: cancela todos os demais frames e abre a nova página no mesmo navegador.</li>
+            </ul>
+            </p>
+            <hr />
+            <h3 id="aTag">A tag a</h3>
+            <p>A tag <code>a</code>, ou ancoragem define um hiperlink, normalmenteutilizadapara ligar uma páginaa outra,
+                seu atributomais importante é o <code>href</code>, que indica o destino do link.
+                Por padrão, os links aparecerão da seguinte forma em todos os navegadores:
+            <ul>
+                <li>Um link não visitado é sublinhado e azul</li>
+                <li>Um link visitado é sublinhado e roxo</li>
+                <li>Um link ativo é sublinhado e vermelho</li>
+            </ul>
+            </p>
+            <hr />
+
+        </section>
+    </main>
+
+
+    <footer>Rodapé</footer>
+
+</body>
+
+</html>
