@@ -1,0 +1,25 @@
+{
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "C/C++: teste.c arquivo de build ativo",
+            "command": "c:\\Users\\agnes\\OneDrive\\Documentos\\Estudando\\Git\\lista_de_exercicios\\Estudando_26\\C\\teste.c",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+            ],
+            "options": {
+                "cwd": "c:\\Users\\agnes\\OneDrive\\Documentos\\Estudando\\Git\\lista_de_exercicios\\Estudando_26\\C"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": "build",
+            "detail": "Tarefa gerada pelo Depurador."
+        }
+    ],
+    "version": "2.0.0"
+}

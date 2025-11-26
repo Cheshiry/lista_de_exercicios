@@ -1,13 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "utilidades.h"
-#include "autenticacao.h"
-#include "categorias.h"
-#include "fornecedores.h"
-#include "produtos.h"
-#include "estoque.h"
-#include "relatorios.h"
 
 extern void carregar_dados_iniciais();
 
