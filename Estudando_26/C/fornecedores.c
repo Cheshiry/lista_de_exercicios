@@ -71,7 +71,6 @@ int gerar_novo_id_fornecedor() {
 // -----------------------------------
 
 void incluir_fornecedor() {
-    clear_screen();
     printf("========================================================\n");
     printf("||           INCLUIR NOVO FORNECEDOR                    ||\n");
     printf("========================================================\n");
@@ -87,19 +86,19 @@ void incluir_fornecedor() {
     printf(">> Novo ID gerado: %d\n\n", fornecedores[novo_indice].id);
     
     printf(">> Digite o Nome da Empresa Fornecedora (Max 99 chars): ");
-    flush_input(); 
+    //flush_input();
     if (fgets(fornecedores[novo_indice].nome, sizeof(fornecedores[0].nome), stdin) != NULL) {
         fornecedores[novo_indice].nome[strcspn(fornecedores[novo_indice].nome, "\n")] = 0;
     }
 
     printf(">> Digite o Nome de Contato (Max 99 chars): ");
-    flush_input(); 
+    //flush_input();
     if (fgets(fornecedores[novo_indice].nomeContato, sizeof(fornecedores[0].nomeContato), stdin) != NULL) {
         fornecedores[novo_indice].nomeContato[strcspn(fornecedores[novo_indice].nomeContato, "\n")] = 0;
     }
 
     printf(">> Digite o Número do WhatsApp (Max 49 chars): ");
-    flush_input(); 
+    //flush_input();
     if (fgets(fornecedores[novo_indice].numeroWhatsApp, sizeof(fornecedores[0].numeroWhatsApp), stdin) != NULL) {
         fornecedores[novo_indice].numeroWhatsApp[strcspn(fornecedores[novo_indice].numeroWhatsApp, "\n")] = 0;
     }
@@ -116,7 +115,7 @@ void incluir_fornecedor() {
 // -----------------------------------
 
 void listar_fornecedores() {
-    clear_screen();
+
     printf("========================================================================================================================\n");
     printf("||                                         LISTAGEM DE FORNECEDORES                                                   ||\n");
     printf("========================================================================================================================\n");
@@ -147,7 +146,7 @@ void listar_fornecedores() {
 // -----------------------------------
 
 void editar_fornecedor() {
-    clear_screen();
+
     printf("========================================================\n");
     printf("||              EDITAR FORNECEDOR                       ||\n");
     printf("========================================================\n");
@@ -163,10 +162,10 @@ void editar_fornecedor() {
     printf(">> Digite o ID do fornecedor que deseja editar: ");
     if (scanf("%d", &id_editar) != 1) {
         printf("\nERRO: Entrada inválida.\n");
-        flush_input(); 
+        //flush_input();
         return;
     }
-    flush_input(); 
+    //flush_input();
     
     for (int i = 0; i < num_fornecedores; i++) {
         if (fornecedores[i].id == id_editar) {
@@ -217,7 +216,7 @@ void editar_fornecedor() {
 // -----------------------------------
 
 void excluir_fornecedor_logica() {
-    clear_screen();
+
     printf("========================================================\n");
     printf("||     EXCLUIR FORNECEDOR (EXCLUSÃO LÓGICA)             ||\n");
     printf("========================================================\n");
@@ -234,10 +233,10 @@ void excluir_fornecedor_logica() {
     
     if (scanf("%d", &id_excluir) != 1) {
         printf("\nERRO: Entrada inválida.\n");
-        flush_input(); 
+        //flush_input();
         return;
     }
-    flush_input(); 
+    //flush_input();
     
     for (int i = 0; i < num_fornecedores; i++) {
         if (fornecedores[i].id == id_excluir) {
@@ -270,7 +269,6 @@ void menu_fornecedor() {
     int is_admin = is_admin_user();
 
     do {
-        clear_screen();
         printf("========================================================\n");
         printf("||          GERENCIAR FORNECEDORES                      ||\n");
         printf("|| %-50s ||\n", is_admin ? "ADMINISTRADOR (Acesso Total)" : "SIMPLES (Acesso Restrito)");		
@@ -287,9 +285,9 @@ void menu_fornecedor() {
 
 		if (scanf("%d", &opcao) != 1) {	
             opcao = -1;	
-            flush_input();	
+            //flush_input();
 		}
-		clear_screen();
+
 
 		switch (opcao) {
 			case 1:	
@@ -315,7 +313,7 @@ void menu_fornecedor() {
 
 		if (opcao != 0) {
 			printf("\nPressione ENTER para continuar...");
-			flush_input();
+			//flush_input();
 			getchar();
 		}
 	} while (opcao != 0);
